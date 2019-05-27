@@ -8,16 +8,16 @@ namespace LabelPrinting
 {
     class File
     {
-        string Name { get; set; }
-        string Extension { get; set; }
-        bool Processed { get; set; }
+        public string Name { get; set; }
+        public string Extension { get; set; }
+        public bool Processed { get; set; }
 
-        string SearchKeyWord(string keyword)
+        public string SearchKeyWord(string keyword)
         {
             return "";
         }
 
-        string ReadLines(int numberOfLines)
+        public string ReadLines(int numberOfLines)
         {
             return "";
         }

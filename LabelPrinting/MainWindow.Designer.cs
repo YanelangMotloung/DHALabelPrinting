@@ -31,6 +31,9 @@ namespace LabelPrinting
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnWatchFolderConf = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -73,6 +76,9 @@ namespace LabelPrinting
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.btnWatchFolderConf);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
@@ -88,39 +94,74 @@ namespace LabelPrinting
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(273, 312);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 17);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Not Configured";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(60, 312);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(164, 17);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Watch Folder                 :";
+            // 
+            // btnWatchFolderConf
+            // 
+            this.btnWatchFolderConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWatchFolderConf.Location = new System.Drawing.Point(537, 309);
+            this.btnWatchFolderConf.Name = "btnWatchFolderConf";
+            this.btnWatchFolderConf.Size = new System.Drawing.Size(106, 36);
+            this.btnWatchFolderConf.TabIndex = 9;
+            this.btnWatchFolderConf.Text = "Configure";
+            this.btnWatchFolderConf.UseVisualStyleBackColor = true;
+            this.btnWatchFolderConf.Click += new System.EventHandler(this.btnWatchFolderConf_Click);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(350, 267);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(273, 267);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
+            this.label15.Size = new System.Drawing.Size(54, 17);
             this.label15.TabIndex = 8;
             this.label15.Text = "label15";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(353, 205);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(273, 209);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
+            this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 7;
             this.label14.Text = "label14";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(353, 148);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(273, 152);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.Size = new System.Drawing.Size(54, 17);
             this.label13.TabIndex = 6;
             this.label13.Text = "label13";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(350, 92);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(273, 100);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.Size = new System.Drawing.Size(54, 17);
             this.label12.TabIndex = 5;
             this.label12.Text = "label12";
             // 
@@ -231,42 +272,51 @@ namespace LabelPrinting
             // 
             // btnChange5
             // 
+            this.btnChange5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange5.Location = new System.Drawing.Point(306, 289);
             this.btnChange5.Name = "btnChange5";
             this.btnChange5.Size = new System.Drawing.Size(75, 23);
             this.btnChange5.TabIndex = 15;
             this.btnChange5.Text = "Change";
             this.btnChange5.UseVisualStyleBackColor = true;
+            this.btnChange5.Click += new System.EventHandler(this.btnChange5_Click);
             // 
             // btnChange4
             // 
+            this.btnChange4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange4.Location = new System.Drawing.Point(306, 234);
             this.btnChange4.Name = "btnChange4";
             this.btnChange4.Size = new System.Drawing.Size(75, 23);
             this.btnChange4.TabIndex = 14;
             this.btnChange4.Text = "Change";
             this.btnChange4.UseVisualStyleBackColor = true;
+            this.btnChange4.Click += new System.EventHandler(this.btnChange4_Click);
             // 
             // btnChange3
             // 
+            this.btnChange3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange3.Location = new System.Drawing.Point(306, 178);
             this.btnChange3.Name = "btnChange3";
             this.btnChange3.Size = new System.Drawing.Size(75, 23);
             this.btnChange3.TabIndex = 13;
             this.btnChange3.Text = "Change";
             this.btnChange3.UseVisualStyleBackColor = true;
+            this.btnChange3.Click += new System.EventHandler(this.btnChange3_Click);
             // 
             // btnChange2
             // 
+            this.btnChange2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange2.Location = new System.Drawing.Point(306, 120);
             this.btnChange2.Name = "btnChange2";
             this.btnChange2.Size = new System.Drawing.Size(75, 23);
             this.btnChange2.TabIndex = 12;
             this.btnChange2.Text = "Change";
             this.btnChange2.UseVisualStyleBackColor = true;
+            this.btnChange2.Click += new System.EventHandler(this.btnChange2_Click);
             // 
             // btnChange1
             // 
+            this.btnChange1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange1.Location = new System.Drawing.Point(306, 67);
             this.btnChange1.Name = "btnChange1";
             this.btnChange1.Size = new System.Drawing.Size(75, 23);
@@ -278,90 +328,100 @@ namespace LabelPrinting
             // lblDirectory5
             // 
             this.lblDirectory5.AutoSize = true;
+            this.lblDirectory5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory5.Location = new System.Drawing.Point(71, 299);
             this.lblDirectory5.Name = "lblDirectory5";
-            this.lblDirectory5.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory5.Size = new System.Drawing.Size(54, 17);
             this.lblDirectory5.TabIndex = 10;
             this.lblDirectory5.Text = "label25";
             // 
             // lblDirectory4
             // 
             this.lblDirectory4.AutoSize = true;
+            this.lblDirectory4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory4.Location = new System.Drawing.Point(71, 244);
             this.lblDirectory4.Name = "lblDirectory4";
-            this.lblDirectory4.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory4.Size = new System.Drawing.Size(54, 17);
             this.lblDirectory4.TabIndex = 9;
             this.lblDirectory4.Text = "label24";
             // 
             // lblDirectory3
             // 
             this.lblDirectory3.AutoSize = true;
+            this.lblDirectory3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory3.Location = new System.Drawing.Point(71, 183);
             this.lblDirectory3.Name = "lblDirectory3";
-            this.lblDirectory3.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory3.Size = new System.Drawing.Size(54, 17);
             this.lblDirectory3.TabIndex = 8;
             this.lblDirectory3.Text = "label23";
             // 
             // lblDirectory2
             // 
             this.lblDirectory2.AutoSize = true;
+            this.lblDirectory2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory2.Location = new System.Drawing.Point(71, 130);
             this.lblDirectory2.Name = "lblDirectory2";
-            this.lblDirectory2.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory2.Size = new System.Drawing.Size(54, 17);
             this.lblDirectory2.TabIndex = 7;
             this.lblDirectory2.Text = "label22";
             // 
             // lblDirectory1
             // 
             this.lblDirectory1.AutoSize = true;
+            this.lblDirectory1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory1.Location = new System.Drawing.Point(71, 67);
             this.lblDirectory1.Name = "lblDirectory1";
-            this.lblDirectory1.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory1.Size = new System.Drawing.Size(54, 17);
             this.lblDirectory1.TabIndex = 6;
             this.lblDirectory1.Text = "label21";
             // 
             // lblDirectory5Access
             // 
             this.lblDirectory5Access.AutoSize = true;
+            this.lblDirectory5Access.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory5Access.Location = new System.Drawing.Point(6, 299);
             this.lblDirectory5Access.Name = "lblDirectory5Access";
-            this.lblDirectory5Access.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory5Access.Size = new System.Drawing.Size(70, 24);
             this.lblDirectory5Access.TabIndex = 5;
             this.lblDirectory5Access.Text = "label20";
             // 
             // lblDirectory4Access
             // 
             this.lblDirectory4Access.AutoSize = true;
+            this.lblDirectory4Access.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory4Access.Location = new System.Drawing.Point(6, 244);
             this.lblDirectory4Access.Name = "lblDirectory4Access";
-            this.lblDirectory4Access.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory4Access.Size = new System.Drawing.Size(70, 24);
             this.lblDirectory4Access.TabIndex = 4;
             this.lblDirectory4Access.Text = "label19";
             // 
             // lblDirectory3Access
             // 
             this.lblDirectory3Access.AutoSize = true;
+            this.lblDirectory3Access.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory3Access.Location = new System.Drawing.Point(6, 183);
             this.lblDirectory3Access.Name = "lblDirectory3Access";
-            this.lblDirectory3Access.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory3Access.Size = new System.Drawing.Size(70, 24);
             this.lblDirectory3Access.TabIndex = 3;
             this.lblDirectory3Access.Text = "label18";
             // 
             // lblDirectory2Access
             // 
             this.lblDirectory2Access.AutoSize = true;
+            this.lblDirectory2Access.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory2Access.Location = new System.Drawing.Point(6, 130);
             this.lblDirectory2Access.Name = "lblDirectory2Access";
-            this.lblDirectory2Access.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory2Access.Size = new System.Drawing.Size(70, 24);
             this.lblDirectory2Access.TabIndex = 2;
             this.lblDirectory2Access.Text = "label17";
             // 
             // lblDirectory1Access
             // 
             this.lblDirectory1Access.AutoSize = true;
+            this.lblDirectory1Access.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirectory1Access.Location = new System.Drawing.Point(6, 67);
             this.lblDirectory1Access.Name = "lblDirectory1Access";
-            this.lblDirectory1Access.Size = new System.Drawing.Size(41, 13);
+            this.lblDirectory1Access.Size = new System.Drawing.Size(70, 24);
             this.lblDirectory1Access.TabIndex = 1;
             this.lblDirectory1Access.Text = "label16";
             // 
@@ -391,18 +451,20 @@ namespace LabelPrinting
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(195, 80);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(46, 17);
             this.label7.TabIndex = 4;
             this.label7.Text = "label7";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(195, 45);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(46, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "label6";
             // 
@@ -451,7 +513,7 @@ namespace LabelPrinting
             this.Name = "MainWindow";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "DHA LABEL PRINTER";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -500,6 +562,9 @@ namespace LabelPrinting
         private Label lblDirectory3Access;
         private Label lblDirectory2Access;
         private Label lblDirectory1Access;
+        private Button btnWatchFolderConf;
+        private Label label16;
+        private Label label17;
     }
 }
 

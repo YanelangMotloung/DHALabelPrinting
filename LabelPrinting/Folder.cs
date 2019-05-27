@@ -8,9 +8,15 @@ namespace LabelPrinting
 {
     class Folder
     {
-        string Name { get; set; }
-        List<File> Files = new List<File>();
-        bool Access { get; set; }
+        public string Name { get; set; }
+        public List<File> Files = new List<File>();
+        public bool Access { get; set; }
+
+
+        public void AddFiles()
+        {
+
+        }
 
         public File GetFile()
         {
@@ -19,6 +25,11 @@ namespace LabelPrinting
         }
 
         public void SetFileStatus(File file)
+        {
+
+        }
+
+        public void ProcessFile(File file)
         {
 
         }
