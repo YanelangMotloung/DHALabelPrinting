@@ -1,34 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LabelPrinting
 {
     class Processor
     {
-        public List<File> files   = new List<File>();        
+        public List<File> files = new List<File>();
         public FileSystemWatcher watcher = new FileSystemWatcher();
-
-
+        
         public FileSystemWatcher OutPutwatcher1 = new FileSystemWatcher();
         public FileSystemWatcher OutPutwatcher2 = new FileSystemWatcher();
         public FileSystemWatcher OutPutwatcher3 = new FileSystemWatcher();
         public FileSystemWatcher OutPutwatcher4 = new FileSystemWatcher();
         public FileSystemWatcher OutPutwatcher5 = new FileSystemWatcher();
-
-
-
+        
         //setting the output folders
-        public string FirstFolder  = string.Empty;
+        public string FirstFolder = string.Empty;
         public string SecondFolder = string.Empty;
-        public string ThirdFolder  = string.Empty;
+        public string ThirdFolder = string.Empty;
         public string FourthFolder = string.Empty;
-        public string FifthFolder  = string.Empty;
-
-
+        public string FifthFolder = string.Empty;
+        
         //the file that is in progress
         public int ProcessedEntries = 0;
         string lastFileName = string.Empty;
@@ -48,8 +41,8 @@ namespace LabelPrinting
 
         public void WriteToFile(string folder, string content)
         {
-            lastFileName = "/RECORD"+this.ProcessedEntries.ToString();
-            System.IO.File.WriteAllText(folder+lastFileName+".csv",content.ToString() + Environment.NewLine);
+            lastFileName = "/RECORD" + this.ProcessedEntries.ToString();
+            System.IO.File.WriteAllText(folder + lastFileName + ".csv", content.ToString() + Environment.NewLine);
             ProcessedEntries++;
         }
 
@@ -67,17 +60,17 @@ namespace LabelPrinting
                 return true;
             }
             catch (System.Exception)
-            {       
+            {
                 throw;
             }
-            
+
         }
 
         internal void AppendToFile(string thirdFolder, IEnumerable<string> lines)
         {
             foreach (string line in lines)
             {
-                System.IO.File.AppendAllText(thirdFolder+lastFileName+".csv",line.ToString() + Environment.NewLine);
+                System.IO.File.AppendAllText(thirdFolder + lastFileName + ".csv", line.ToString() + Environment.NewLine);
             }
         }
 
@@ -100,6 +93,7 @@ namespace LabelPrinting
 
         public void WatchOutputFolders()
         {
+
             try
             {
                 this.OutPutwatcher1.Path = FirstFolder;
@@ -124,7 +118,53 @@ namespace LabelPrinting
             //ChangedFile.Processed = false;
             //ChangedFile.Extension = Path.GetExtension(ChangedFile.Name);
 
-            System.Windows.Forms.MessageBox.Show("File Ready For Printing :"+e.FullPath);
+            System.Windows.Forms.MessageBox.Show("File Ready For Printing :" + e.FullPath);
+
+        }
+
+
+
+        // set multiple output watchers
+
+        public FileSystemWatcher HITwatcher = new FileSystemWatcher();
+        public FileSystemWatcher NOHITwatcher = new FileSystemWatcher();
+        public FileSystemWatcher MULTIHITwatcher = new FileSystemWatcher();
+        public FileSystemWatcher NOMATCHwatcher = new FileSystemWatcher();
+        public FileSystemWatcher QCwatcher = new FileSystemWatcher();
+
+
+
+        //set watchinput folders
+
+        internal void SetHitFolderWatcher()
+        {
+            try
+            {
+                this.HITwatcher.Path = FirstFolder;
+                this.HITwatcher.NotifyFilter = NotifyFilters.FileName;
+                this.HITwatcher.Filter = "*.csv";
+                this.HITwatcher.Created += new FileSystemEventHandler(onHitFileCreated);
+                this.SetFiles(FirstFolder);
+                this.HITwatcher.EnableRaisingEvents = true;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+
+        private void onHitFileCreated(object sender, FileSystemEventArgs e)
+        {
+            File NewFile = new File();
+            NewFile.Name = e.FullPath;
+            NewFile.Processed = false;
+            NewFile.Extension = Path.GetExtension(NewFile.Name);
+
+            ConfirmFile(NewFile);
+        }
+
+        private void ConfirmFile(File newFile)
+        {
 
         }
     }

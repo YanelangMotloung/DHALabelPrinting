@@ -75,7 +75,6 @@ namespace LabelPrinting
             }
         }
 
-
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (label17.Text.CompareTo("Not Configured") == 0)
@@ -116,8 +115,13 @@ namespace LabelPrinting
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
+                    Folder folder = new Folder();
+                    folder.Name = fbd.SelectedPath;
+                    folder.Access = true;
+
+
                     processor.FirstFolder = fbd.SelectedPath;
-                    processor.WatchOutputFolders();
+                    processor.SetHitFolderWatcher();
 
 
                     try
@@ -138,13 +142,6 @@ namespace LabelPrinting
                     }
                 }
             }
-
-            //string[] files = Directory.GetFiles(fbd.SelectedPath);
-            //Directory.EnumerateFiles;
-
-            //MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
-            //MessageBox.Show("Files found: " + files, "Message");
-
 
         }
 
